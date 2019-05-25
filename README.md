@@ -1,6 +1,6 @@
 # Frontman
 
-Frontman is a micro-project to initialize ProxyBroker serve functionality within a docker container and with a designated `config.yml` file. Once Frontman is built and ran as a container, it is easy to route any other container's traffic through it.
+Frontman is a micro-project to initialize [ProxyBroker](https://github.com/constverum/ProxyBroker) serve functionality within a docker container and with a designated `config.yml` file. Once Frontman is built and ran as a container, it is easy to route any other container's traffic through it.
 
 ---
 
