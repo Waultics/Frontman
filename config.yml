@@ -1,0 +1,31 @@
+broker:
+    timeout: Default
+    max_conn: Default
+    max_tries: 1
+    judges: Default
+    providers: Default
+    verify_ssl: Default
+
+serve:
+    host: 0.0.0.0
+    port: 8888
+    limit: 10
+    max_tries: 30
+    min_req_proxy: 5
+    max_error_rate: 0.5
+    max_resp_time: 8
+    prefer_connect: True
+    http_allowed_codes:
+        - 200
+        - 301
+        - 302
+    types:
+        - HTTP
+        - HTTPS
+        - CONNECT:80
+    countries: Default
+    post: Default
+    strict: Default
+    dnsbl: Default
+    limit: 10
+    backlog: 100
