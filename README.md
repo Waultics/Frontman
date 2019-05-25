@@ -1,6 +1,6 @@
 # Frontman
 
-Frontman is a micro-project to initialize [ProxyBroker](https://github.com/constverum/ProxyBroker) serve functionality within a docker container and with a designated `config.yml` file. Once Frontman is built and ran as a container, it is easy to route any other container's traffic through it.
+Frontman is a micro-project to initialize [ProxyBroker](https://github.com/constverum/ProxyBroker) serve functionality within a docker container, as well as provide easily customizable `config.yml` file. Once Frontman is built and ran as a container, you may route any other container's traffic through it.
 
 ---
 
@@ -17,7 +17,9 @@ docker run -p 8888:8888 frontman
 
 ## Routing Traffic
 
-If you want to route the traffic of another container through Frontman you will have to utilize an `.env` and `docker-compose.yml` file.
+If you want to route the traffic of another container through Frontman you will either have to utilize an `.env` and `docker-compose.yml` file, or run your container with `-env` flag.
+
+### Using `docker-compose.yml` and `.env`
 
 #### `.env`
 ```
@@ -38,6 +40,10 @@ my-service:
       http_proxy: ${http_proxy}
       https_proxy: ${https_proxy}
 ```
+
+### Note
+
+If you are using `asyncio` for your application make sure that you set the `ClientSession()` variable `trust_env` to `True`, otherwise `asyncio` will not utilize the environment settings. You can read more about this in their docs, [here](https://docs.aiohttp.org/en/stable/client_reference.html).
 
 ---
 
