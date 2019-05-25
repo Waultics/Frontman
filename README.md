@@ -21,14 +21,16 @@ If you want to route the traffic of another container through Frontman you will 
 
 #### `.env`
 ```
-http_proxy=http://0.0.0.0:8888
-https_proxy=http://0.0.0.0:8888
+http_proxy=http://frontman:8888
+https_proxy=http://frontman:8888
 ```
 
 #### `docker-compose.yml`
 ```
 frontman:
     image: frontman
+    ports:
+        - "8888:8888"
 
 my-service:
   image: ...
