@@ -2,3 +2,4 @@ frontman.*
 .python-version
 .DS_Store
 ProxyBroker
+.ropeproject

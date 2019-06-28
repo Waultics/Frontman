@@ -1,2 +1,5 @@
 aiohttp
 pyyaml
+PyOpenSSL
+git+https://github.com/benoitc/http-parser
+git+https://github.com/synchronizing/ProxyBroker

@@ -1,7 +1,7 @@
 broker:
-    timeout: Default
+    timeout: 3
     max_conn: Default
-    max_tries: 1
+    max_tries: 5
     judges: Default
     providers: Default
     verify_ssl: Default
@@ -10,7 +10,7 @@ serve:
     host: 0.0.0.0
     port: 8888
     limit: 10
-    max_tries: 30
+    max_tries: 10
     min_req_proxy: 5
     max_error_rate: 0.5
     max_resp_time: 8
@@ -19,13 +19,10 @@ serve:
         - 200
         - 301
         - 302
-    types:
-        - HTTP
-        - HTTPS
-        - CONNECT:80
     countries: Default
     post: Default
-    strict: Default
+    strict: True
     dnsbl: Default
-    limit: 10
-    backlog: 100
+    backlog: Default
+    check: True
+    types: Default # Change this directly inside broker.py.

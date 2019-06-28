@@ -4,7 +4,7 @@ FROM python:3
 EXPOSE 8888
 
 # Sets the workdir of our container to dir below.
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/Frontman
 
 # Copies our project and its requirements.txt over to the dir above.
 COPY Frontman .
