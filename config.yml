@@ -1,5 +1,5 @@
 broker:
-    timeout: 5
+    timeout: 20
     max_conn: Default
     max_tries: 5
     judges: Default
@@ -9,8 +9,8 @@ broker:
 serve:
     host: 0.0.0.0
     port: 8888
-    limit: 10
-    max_tries: 15
+    limit: 100
+    max_tries: 20 
     min_req_proxy: 2
     max_error_rate: 0.5
     max_resp_time: 8
